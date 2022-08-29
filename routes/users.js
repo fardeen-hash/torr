@@ -18,7 +18,7 @@ router.get("/", async function (req, res, next) {
  const torrentHtmlDetail = await TorrentSearchApi.getTorrentDetails(torrent);
  const magnet = await TorrentSearchApi.getMagnet(torrent);
  console.log(rand);
- res.send(magnet); 
+ res.send(torrentHtmlDetail); 
 //  console.log(torrentHtmlDetail);
  console.log(torrents[rand]);
  const buffer = await TorrentSearchApi.downloadTorrent(torrent);
